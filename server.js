@@ -6,7 +6,7 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
     res.send("Welcome to signup page");
-})
+});
 
 app.post('/signup', (req, res) =>{
     const {username, email, password, dateOfBirth} = req.body;
@@ -27,7 +27,7 @@ app.post('/signup', (req, res) =>{
     res.status(201).json({
         message:"You have successfully signed up",
         users:{username, email, dateOfBirth}
-    })
+    });
 
 
 });
